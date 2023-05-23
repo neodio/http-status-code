@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns="http://www.nhncorp.com/lucy-xss"
+    extends="lucy-xss-default-sax.xml">
+
+  <elementRule>
+    <element name="body" disable="true"/>
+    <element name="embed" disable="true"/>
+    <element name="iframe" disable="true"/>
+    <element name="meta" disable="true"/>
+    <element name="object" disable="true"/>
+    <element name="script" disable="true"/>
+    <element name="style" disable="true"/>
+    <element name="link" disable="true"/>
+    <element name="base" disable="true"/>
+  </elementRule>
+
+  <attributeRule>
+    <!-- attribute settings by security guideline of WeMakePrice -->
+    <attribute name="FSCommand">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onAbort">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onActivate">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onAfterPrint">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onAfterUpdate">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforeActivate">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforeCopy">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforeCut">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforeDeactivate">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforeEditFocus">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforePaste">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforePrint">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforeUnload">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBeforeUpdate">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBegin">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBlur">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onBounce">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onCellChange">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onChange">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onClick">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onContextMenu">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onControlSelect">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onCopy">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onCut">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDataAvailable">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDataSetChanged">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDataSetComplete">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDblClick">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDeactivate">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDrag">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDragEnd">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDragLeave">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDragEnter">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDragOver">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDragDrop">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDragStart">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onDrop">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onEnd">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onError">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onErrorUpdate">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onFilterChange">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onFinish">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onFocus">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onFocusIn">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onFocusOut">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onHashChange">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onHelp">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onInput">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onKeyDown">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onKeyPress">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onKeyUp">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onLayoutComplete">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onLoad">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onLoseCapture">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMediaComplete">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMediaError">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMessage">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMouseDown">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMouseEnter">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMouseLeave">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMouseMove">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMouseOut">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMouseOver">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMouseUp">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMouseWheel">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMove">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMoveEnd">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onMoveStart">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onOffline">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onOnline">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onOutOfSync">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onPaste">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onPause">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onPopState">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onProgress">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onPropertyChange">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onReadyStateChange">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onRedo">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onRepeat">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onReset">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onResize">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onResizeEnd">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onResizeStart">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onResume">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onReverse">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onRowsEnter">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onRowExit">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onRowDelete">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onRowInserted">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onScroll">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onSeek">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onSelect">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onSelectionChange">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onSelectStart">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onStart">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onStop">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onStorage">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onSyncRestored">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onSubmit">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onTimeError">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onTrackChange">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onUndo">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onUnload">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="onURLFlip">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="seekSegmentTime">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <!-- //attribute settings by security guideline of WeMakePrice -->
+
+    <!-- provided by lucy filter superset -->
+    <attribute name="data" base64Decoding="true">
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:d\\*a\\*t\\*a\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[&[#\\%x]+[\da-fA-F][\da-fA-F]+]]></notAllowedPattern>
+    </attribute>
+    <attribute name="src" base64Decoding="true">
+      <notAllowedPattern><![CDATA[(?i:s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[(?i:d\\*a\\*t\\*a\\*:)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[&[#\\%x]+[\da-fA-F][\da-fA-F]+]]></notAllowedPattern>
+    </attribute>
+    <attribute name="style">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+      <notAllowedPattern>
+        <![CDATA[(?i:e\\*x\\*p\\*r\\*e\\*s\\*s\\*i\\*o\\*n)]]></notAllowedPattern>
+      <notAllowedPattern><![CDATA[&[#\\%x]+[\da-fA-F][\da-fA-F]+]]></notAllowedPattern>
+    </attribute>
+    <attribute name="href">
+      <notAllowedPattern>
+        <![CDATA[(?i:j\\*a\\*v\\*a\\*s\\*c\\*r\\*i\\*p\\*t\\*:)]]></notAllowedPattern>
+    </attribute>
+    <attribute name="formaction" disable="true"/>
+    <!-- //provided by lucy filter superset -->
+  </attributeRule>
+
+</config>

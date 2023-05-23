@@ -1,0 +1,66 @@
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  application:
+    name: http-status-code
+  profiles:
+    active: local # default profile
+
+  mvc:
+    throw-exception-if-no-handler-found: true
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+# actuator 기본 설정
+management:
+  endpoint:
+    health:
+      show-details: never
+  endpoints:
+    web:
+      base-path: /servicemanager
+      exposure:
+        include: health
+
+feign:
+  client:
+    config:
+      default:
+        logger-level: basic
+        connect-timeout: 5000
+        read-timeout: 60000
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+
+---
+spring:
+  config:
+    activate:
+      on-profile: stg
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod

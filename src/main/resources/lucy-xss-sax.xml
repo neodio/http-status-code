@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns="http://www.nhncorp.com/lucy-xss" extends="lucy-xss-superset-sax.xml">
+
+    <elementRule>
+        <element name="embed" extends="true" disable="false" removeTag="false"/>
+        <element name="iframe" extends="true" disable="false" removeTag="false"/>
+        <element name="object" extends="true" disable="false" removeTag="false"/>
+        <element name="body" extends="true" disable="false" removeTag="true"/>
+        <element name="meta" extends="true" disable="false" removeTag="true"/>
+        <element name="script" extends="true" disable="false" removeTag="true"/>
+        <element name="style" extends="true" disable="false" removeTag="true"/>
+        <element name="link" extends="true" disable="false" removeTag="true"/>
+        <element name="base" extends="true" disable="false" removeTag="true"/>
+        <element name="applet" extends="true" disable="false" removeTag="true"/>
+        <element name="bgsound" extends="true" disable="false" removeTag="true"/>
+        <element name="title" extends="true" disable="false" removeTag="true"/>
+        <element name="html" extends="true" disable="false" removeTag="true"/>
+    </elementRule>
+
+</config>
