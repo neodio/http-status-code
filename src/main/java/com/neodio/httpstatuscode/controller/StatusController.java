@@ -36,6 +36,6 @@ public class StatusController {
     @GetMapping(value = {"**", "*"})
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public CommonResponse route(HttpServletResponse response) {
-        return CommonResponse.fail("","404");
+        return CommonResponse.fail("","4041");
     }
 }
