@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/empty">
+<head>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <div class="middle-box text-center animated fadeInDown">
+        <h2>Internal Server Error 500</h2>
+        <h3 class="font-bold" th:text="#{text.error_occurred}"></h3>
+        <h3 class="font-bold" th:text="${exception_message}"></h3>
+
+        <div class="error-desc">
+            <a th:href="@{${redirectUrl}}" class="btn btn-primary m-t" th:text="#{btn.go_to_main}"></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

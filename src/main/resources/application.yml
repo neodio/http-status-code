@@ -10,11 +10,11 @@ spring:
   profiles:
     active: local # default profile
 
-  mvc:
-    throw-exception-if-no-handler-found: true
-    view:
-      prefix: /WEB-INF/views/
-      suffix: .jsp
+#  mvc:
+#    throw-exception-if-no-handler-found: true
+#    view:
+#      prefix: /WEB-INF/views/
+#      suffix: .jsp
 
 # actuator 기본 설정
 management:
